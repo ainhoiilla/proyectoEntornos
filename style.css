@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    overflow-x: hidden; 
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: 'Montserrat';
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contenido {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.formulario#inicio {
+    background-color: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formulario#inicio h2 {
+    font-family: 'Montserrat';
+    text-align: center;
+    color: #423adb;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.partesFormulario {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.partesFormulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.partesFormulario input[type="text"],
+.partesFormulario input[type="password"] {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #252525;
+    color: #fff;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partesFormulario input[type="text"]:focus,
+.partesFormulario input[type="password"]:focus {
+    outline: none;
+    border-color: #423adb;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25);
+}
+
+.formulario#inicio a {
+    text-decoration: none;
+    display: block; 
+    margin-top: 10px; 
+}
+
+.formulario#inicio button {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #423adb 0%, #7d78de 100%);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 15px #040135;
+}
+
+.formulario#inicio button:hover {
+    background: linear-gradient(90deg, #7d78de 0%, #423adb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #7069f2;
+}
+
+.formulario#inicio button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px #040135;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: auto;
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .formulario#inicio {
+        padding: 25px 20px;
+        margin: 20px; 
+    }
+
+    .formulario#inicio h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .partesFormulario input[type="text"],
+    .partesFormulario input[type="password"] {
+        padding: 12px 15px;
+    }
+
+    .formulario#inicio button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}

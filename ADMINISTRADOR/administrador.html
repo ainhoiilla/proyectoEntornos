@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Ainhoa">
+    <link rel="icon" type="image/x-icon" href="../icono.png">
+    <title>Área administrador - T-FITNESS</title>
+</head>
+<body>
+    <header>
+        <h1>T-FITNESS</h1>
+    </header>
+
+    <h2 class="titulosec">Hola, Pepe...</h2>
+
+    <div class="contenedor">
+        <section class="parte">
+            <h2>Registrar nuevo cliente</h2>
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="juanperez@email.com" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="600123456" required>
+
+                <label for="fecha">Fecha de alta</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="rutina">Rutina asignada</label>
+                <input type="text" id="rutina" name="rutina" placeholder="Rutina Hipertrofia - Lunes, Miércoles y Viernes" required>
+
+
+
+                <button type="submit">Guardar Cliente</button>
+            </form>
+        </section>
+
+            
+        <section class="parte">
+            <h2>Añadir Nuevo evento</h2>
+            <div class="partesformulario">
+            <label for="titulo">Título del eventos</label>
+            <input type="text" id="titulo" placeholder="Ej: Carrera solidaria">
+            </div>
+            <div class="partesformulario">
+            <label for="fecha">Fecha del evento</label>
+            <input type="date" id="fecha">
+            </div>
+            <div class="partesformulario">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="3" placeholder="Detalles del eventos..."></textarea>
+            </div>
+            <button>Añadir evento</button>
+
+            <h2>Eventos Programados</h2>
+            <div id="listaeventosos"></div>
+        </section>
+
+        <section class="parte">
+            <h2>Lista de Clientes</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Pago</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="../DATOSCLIENTE/datoscliente.html">Juan Pérez</a></td>
+                    <td>Pagado</td>
+                    <td><button>Desactivar tarjeta</button></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Laura Gómez</a></td>
+                    <td>No pagado</td>
+                    <td><button>Desactivar tarjeta</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 T-FITNESS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

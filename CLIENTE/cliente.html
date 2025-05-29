@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área Cliente - T-FITNESS</title>
+  <meta name="author" content="Ainhoa">
+  <link rel="icon" type="image/x-icon" href="../icono.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>T-FITNESS</h1>
+  </header>
+
+  <a href="../DATOSCLIENTE/datoscliente.html" class="foto"> <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de perfil - Editar"></a>
+
+  <h2 class="titulosec">Hola, Jose...</h2>
+
+  <div class="contenedor">
+    
+  
+    <section class="parte">
+      <h2>Mi Rutina</h2>
+      <ul>
+        <li>
+        <input type="checkbox" class="checkbox"> Pecho - Press banca - 4x12
+        <form class="datosejercicio">
+            <label>Peso (kg): <input type="number" name="peso" min="0" step="0.1"></label>
+            <label>Repeticiones: <input type="number" name="reps" min="0" step="1"></label>
+        </form>
+        </li>
+        <li>
+        <input type="checkbox" class="checkbox"> Espalda - Jalón al pecho - 4x10
+        <form class="datosejercicio">
+            <label>Peso (kg): <input type="number" name="peso" min="0" step="0.1"></label>
+            <label>Repeticiones: <input type="number" name="reps" min="0" step="1"></label>
+        </form>
+        </li>
+        <li>
+        <input type="checkbox" class="checkbox"> Piernas - Sentadilla - 4x15
+        <form class="datosejercicio">
+            <label>Peso (kg): <input type="number" name="peso" min="0" step="0.1"></label>
+            <label>Repeticiones: <input type="number" name="reps" min="0" step="1"></label>
+        </form>
+        </li>
+      </ul>
+      <button type="button" id="guardar">Completar</button>
+    </section>
+
+    <section class="parte">
+      <h2>calendario de Clases - Junio</h2>
+      <div class="calendario">
+
+        <div class="dia">Lun<br>3<div class="eventos">Zumba 18:00</div></div>
+        <div class="dia">Mar<br>4</div>
+        <div class="dia">Mié<br>5<div class="eventos">Pilates 19:00</div></div>
+        <div class="dia">Jue<br>6</div>
+        <div class="dia">Vie<br>7<div class="eventos">Abdominales 17:00</div></div>
+        <div class="dia">Sáb<br>8</div>
+        <div class="dia">Dom<br>9</div>
+      
+      </div>
+    </section>
+
+    <div class="tablon">
+        <section class="parte">
+          <h2>Noticias y eventos</h2>
+          <p>✅ Carrera solidaria - 20 de junio</p>
+          <p>🎉 Descuento del 15% para nuevos socios</p>
+        </section>
+    </div>
+  </div>
+  <footer>
+      <p>&copy; 2025 T-FITNESS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

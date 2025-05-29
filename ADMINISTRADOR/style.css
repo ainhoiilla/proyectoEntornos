@@ -1,0 +1,279 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: #1a1d21; 
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: 'Montserrat';
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+h2.titulosec { 
+    font-family: 'Montserrat';
+    color: #e0e0e0;
+    margin: 30px 20px 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1300px; 
+    margin: 0 auto 30px auto;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    flex-grow: 1;
+}
+
+section.parte {
+    background-color: #252930; 
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-top: 3px solid #423adb; 
+}
+
+section.parte h2 { 
+    font-family: 'Montserrat';
+    color: #423adb;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #3a3f47;
+    padding-bottom: 10px;
+}
+
+
+form label,
+.partesformulario label { 
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+.partesformulario input[type="text"], 
+.partesformulario input[type="date"], 
+form textarea, 
+.partesformulario textarea { 
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #40454c;
+    background-color: #30353d;
+    color: #f0f0f0;
+    font-size: 1em;
+    font-family: 'Roboto';
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+.partesformulario input:focus,
+form textarea:focus,
+.partesformulario textarea:focus {
+    outline: none;
+    border-color: #423adb;
+    box-shadow: 0 0 0 3px #040135;
+}
+
+form textarea,
+.partesformulario textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+section.parte button,
+section.parte button[type="submit"] {
+    display: inline-block; 
+    min-width: 160px;
+    text-align: center;
+    background: linear-gradient(90deg, #423adb 0%, #7d78de 100%);
+    color: white;
+    padding: 10px 22px; 
+    border-radius: 6px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px #040135; 
+}
+
+section.parte button:hover,
+section.parte button[type="submit"]:hover {
+    background: linear-gradient(90deg, #7d78de 0%, #423adb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #040135;
+}
+
+section.parte form button[type="submit"] { 
+    width: 100%;
+}
+
+
+
+#listaeventosos { 
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #30353d;
+    border-radius: 6px;
+    min-height: 50px; 
+    color: #aaa;
+    text-align: center;
+    font-style: italic;
+}
+#listaeventosos:empty::before {
+    content: "No hay eventosos programados.";
+}
+
+
+
+table { 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead th { 
+    font-family: 'Montserrat';
+    background-color: #333942;
+    color: #423adb;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr { 
+    border-bottom: 1px solid #3a3f47;
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tbody tr:hover {
+    background-color: #30353d;
+}
+
+table tbody td { 
+    padding: 10px 15px; 
+    color: #d0d0d0;
+    font-size: 0.9em;
+    vertical-align: middle; 
+}
+
+table tbody td a { 
+    color: #423adb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+table tbody td a:hover {
+    color: #6b64f7;
+    text-decoration: underline;
+}
+
+table tbody td button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+    min-width: auto;
+    background: #555c66;
+    box-shadow: none;
+}
+
+table tbody td button:hover {
+    background: #666e78;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: auto;
+}
+
+
+@media (max-width: 900px) {
+     .contenedor {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+@media (max-width: 778px) {
+    header h1 {
+        font-size: 2em;
+    }
+    h2.titulosec {
+        font-size: 1.5em;
+    }
+    section.parte h2 {
+        font-size: 1.25em;
+    }
+    section.parte {
+        padding: 20px;
+    }
+    table tbody td, table thead th {
+        padding: 8px 10px;
+    }
+    table tbody td button {
+        width: 100%; 
+        margin-bottom: 5px;
+    }
+    table tbody td button:last-child {
+        margin-bottom: 0;
+    }
+}

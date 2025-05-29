@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: #181818; 
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') center/cover no-repeat; 
+    background-blend-mode: multiply; 
+    background-color: rgba(0, 0, 0, 0.65); 
+    color: white;
+    padding: 30px 20px; 
+    text-align: center; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-family: 'Montserrat'; 
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin: 0; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+h2.titulosec {
+    font-family: 'Montserrat';
+    color: #e0e0e0; 
+    margin: 30px 20px 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 30px auto; 
+    padding: 20px 0; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    flex-grow: 1;
+}
+
+section.parte {
+    background-color: #2a2a2a; 
+    padding: 25px 30px;
+    border-radius: 10px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+    border-top: 3px solid #423adb; 
+}
+
+section.parte h2 {
+    font-family: 'Montserrat';
+    color: #423adb;
+    margin-top: 0; 
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead th {
+    font-family: 'Montserrat';
+    background-color: #333;
+    color: #423adb;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #404040;
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tbody tr:hover {
+    background-color: #383838;
+}
+
+table tbody td {
+    padding: 12px 15px;
+    color: #d0d0d0;
+    font-size: 0.9em;
+}
+
+table tbody td a {
+    color: #423adb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+table tbody td a:hover {
+    color: #394eb0; 
+    text-decoration: underline;
+}
+
+.partesformulario { 
+    margin-bottom: 20px;
+}
+
+.partesformulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.partesformulario select,
+.partesformulario textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 1em;
+    font-family: 'Roboto';
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partesformulario select:focus,
+.partesformulario textarea:focus {
+    outline: none;
+    border-color: #423adb;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25);
+}
+
+.partesformulario textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+section.parte button {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #423adb 0%, #423adb 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px; 
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    margin-top: 10px; 
+    box-shadow: 0 4px 15px #040135;
+}
+
+section.parte button:hover {
+    background: linear-gradient(90deg, #7d78de 0%, #35317a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #7069f2;
+}
+
+section.parte button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px #040135;
+}
+
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr; 
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    h2.titulosec {
+        font-size: 1.5em;
+    }
+    section.parte h2 {
+        font-size: 1.3em;
+    }
+}
